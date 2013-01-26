@@ -58,7 +58,7 @@
   <section id="todoapp">
 <div class="twelve columns">
       
-      <h2>Todos</h2>
+      <h2>TdoList</h2>
 <p>Draft application developed during #FirefoxOSAppDays in Athens.<br><a href="#"  id="install_app"> Install as a web app. </a></p>
       <input id="new-todo" class="twelve" placeholder="What needs to be done?" autofocus>
 	  <ul class="button-group even three-up">
@@ -83,6 +83,8 @@
     <div class="view">
 <td class="three">
       <button class="destroy">remove</button>
+	<button class="edittxt">edit</button>
+
 </td>
 	<td class="one">
       <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
@@ -166,6 +168,7 @@
         'dblclick .label' : 'edit',
         'keypress .edit' : 'updateOnEnter',
         'blur .edit' : 'close',
+	'click .edittxt': 'edit',
         'click .toggle': 'toggleCompleted',
         'click .destroy': 'destroy'
       },
@@ -264,7 +267,7 @@
 
 $(document).ready(function() {
 $('#install_app').click(function(){
-    var request = window.navigator.mozApps.install('http://dgar.github.com/TdoList/manifest.webapp');
+    var request = window.navigator.mozApps.install('http://mc96107.github.com/sunNshadow/manifest.webapp');
     request.onsuccess = function () {
 	// Save the App object that is returned
       var appRecord = this.result;
