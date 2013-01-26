@@ -2,7 +2,7 @@
   "version": "0.1",
   "name": "TdoList",
   "description": "A todo list with checkoxes",
-  "launch_path": "/TdoList/",
+  "launch_path": "/toDeleteMyapp/",
   "icons": {
     "128": "/toDeleteMyapp/images/icon128.png"
   },
